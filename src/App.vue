@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <h1>Antique’s</h1>
     <products/>
   </div>
 </template>
@@ -22,5 +23,10 @@ export default {
 body {
   font-family: 'Markazi Text', serif;
   color: #333;
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
 }
 </style>
