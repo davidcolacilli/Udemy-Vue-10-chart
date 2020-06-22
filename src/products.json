@@ -34,5 +34,17 @@
         "name": "Amazon Kindle",
         "image": "https://picsum.photos/id/367/640/480",
         "price": "99.00"
+    },
+    {
+        "id": "07",
+        "name": "Clavijero Guitarra",
+        "image": "https://picsum.photos/id/145/640/480",
+        "price": "12.00"
+    },
+    {
+        "id": "07",
+        "name": "Fotografía de Amazon Kindle",
+        "image": "https://picsum.photos/id/367/640/480",
+        "price": "9.00"
     }
 ]
