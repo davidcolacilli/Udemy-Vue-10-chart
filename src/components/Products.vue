@@ -19,7 +19,10 @@ export default {
     },
     methods: {
         addProduct(product) {
-            this.$emit('emit-product-to-app', product);
+            if(product.amount) {
+                product.amount--;
+                this.$emit('emit-product-to-app', product);
+            }
         }
     }
 }

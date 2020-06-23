@@ -3,48 +3,56 @@
         "id": "01",
         "name": "Guitarra electrica",
         "image": "https://picsum.photos/id/145/640/480",
-        "price": "1200.00"
+        "price": "1200.00",
+        "amount": 5
     },
     {
         "id": "02",
         "name": "iPhone",
         "image": "https://picsum.photos/id/160/640/480",
-        "price": "1800.00"
+        "price": "1800.00",
+        "amount": 7
     },
     {
         "id": "03",
         "name": "Reloj antiguo",
         "image": "https://picsum.photos/id/175/640/480",
-        "price": "200.00"
+        "price": "200.00",
+        "amount": 3
     },
     {
         "id": "04",
         "name": "Camara Vintage",
         "image": "https://picsum.photos/id/250/640/480",
-        "price": "950.00"
+        "price": "950.00",
+        "amount": 1
     },
     {
         "id": "05",
         "name": "Taza Cubana",
         "image": "https://picsum.photos/id/30/640/480",
-        "price": "99.00"
+        "price": "99.00",
+        "amount": 11
     },
     {
         "id": "06",
         "name": "Amazon Kindle",
         "image": "https://picsum.photos/id/367/640/480",
-        "price": "99.00"
+        "price": "99.00",
+        "amount": 6
     },
     {
         "id": "07",
         "name": "Clavijero Guitarra",
         "image": "https://picsum.photos/id/145/640/480",
-        "price": "12.00"
+        "price": "12.00",
+        "amount": 9
     },
     {
-        "id": "07",
+        "id": "08",
         "name": "Fotografía de Amazon Kindle",
         "image": "https://picsum.photos/id/367/640/480",
-        "price": "9.00"
+        "price": "9.00",
+        "amount": 1
     }
 ]

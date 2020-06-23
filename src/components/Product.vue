@@ -3,7 +3,7 @@
         <img :src="product.image" :alt="product.name">
         <h4>${{Number(product.price).toFixed()}}</h4>
         <h3>{{product.name}}</h3>
-        <button @click="addProduct(product)">Add</button>
+        <button @click="addProduct(product)" :disabled="!product.amount">Add</button>
     </section>    
 </template>
 <script>
@@ -59,6 +59,12 @@ button:hover {
 }
 button:focus {
     outline: none;
+}
+button:focus:not(:disabled) {
     border: 1px solid #8f5555;
+}
+button:disabled {
+    opacity: .4;
+    background: none;
 }
 </style>
