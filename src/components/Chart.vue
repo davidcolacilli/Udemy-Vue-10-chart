@@ -4,13 +4,13 @@
             <span>{{items.length}} items in chart</span>
             <span>Total: ${{total()}}</span>
         </h3>
-        <button>Checkout</button>
         <ul v-if="items.length">
             <li v-for="item in items" :key="item.id">
                 <p>{{item.name}} <span>${{Number(item.price).toFixed()}}</span></p>
-                <button @click="removeItem(item)">Remove</button>
+                <button @click="removeItem(item)" class="btn-link">Remove</button>
             </li>
         </ul>
+        <button @click="checkout()" v-if="items.length" class="btn btn-action">Checkout</button>
     </aside>
 </template>
 <script>
@@ -34,7 +34,7 @@ export default {
         }, */
         total: function() {
             return this.items.reduce((counter, item) => counter + Number(item.price), 0)
-        }
+        },
         /* total: function() {
             let tot = 0;
 
@@ -43,6 +43,9 @@ export default {
             }
             return tot;
         } */
+        checkout: function() {
+            this.$emit("checkout");
+        }
     }
 }
 </script>
@@ -73,18 +76,5 @@ li {
 li:first-child {
     border: none;
 }
-button {
-    display: inline-block;
-    text-transform: uppercase;
-    background: none;
-    color: #c77474;
-    border: none;
-    font-size: .5rem;
-}
-button:hover {
-    color: #853939;
-}
-button:focus {
-    outline: none;
-}
+
 </style>
