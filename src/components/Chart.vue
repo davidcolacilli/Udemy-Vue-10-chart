@@ -27,19 +27,20 @@ export default {
                 item.amount++;
             }
         },
-        /* removeItem: function(item) {
+        /* REFACTOR - NOT WORKING YET
+        removeItem: function(item) {
             this.items = this.items.filter(i => i.id !== item.id);
         }, */
         total: function() {
+            return this.items.reduce((counter, item) => counter + Number(item.price), 0)
+        }
+        /* total: function() {
             let tot = 0;
 
             for(let it of this.items) {
                 tot = tot + Number(it.price);
             }
             return tot;
-        }
-        /* total: function() {
-            return this.items.reduce((counter, item) => counter + Number(item.price), 0)
         } */
     }
 }
