@@ -3,7 +3,8 @@
         <h3>
             <span>{{items.length}} items in chart</span>
             <span>Total: ${{total()}}</span>
-        </h3 >
+        </h3>
+        <button>Checkout</button>
         <ul v-if="items.length">
             <li v-for="item in items" :key="item.id">
                 <p>{{item.name}} <span>${{Number(item.price).toFixed()}}</span></p>
