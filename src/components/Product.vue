@@ -29,10 +29,7 @@ section {
     border-radius: 2px;
     overflow: hidden;
 }
-img {
-    width: 12.5rem; 
-    margin: -1rem -1rem 0;
-}
+img {width: 12.5rem; margin: -1rem -1rem 0;}
 h4 {
     margin: 0;
     font-size: 1.6rem;

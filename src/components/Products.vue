@@ -28,10 +28,6 @@ export default {
 }
 </script>
 <style scoped>
-article {
-    display: flex; 
-    flex-direction: row; 
-    flex-wrap: wrap; 
-    width: 58rem;
-    margin: 0 auto;}
+article {display: flex; flex-direction: row; flex-wrap: wrap; width: 58rem;
+  margin: 0 auto;}
 </style>

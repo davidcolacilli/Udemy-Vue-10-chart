@@ -21,32 +21,28 @@ export default {
     },
     methods: {
         removeItem: function(item) {
-            
-            this.$emit("remove-item", item);
-            /*let i = this.items.indexOf(item);
+            let i = this.items.indexOf(item);
  
             if ( i !== -1 ) {
                 this.items.splice( i, 1 );
                 item.amount++;
-            }*/
-            
-            // REFACTOR - NOT WORKING YET
-            // this.items = this.items.filter(i => i.id !== item.id);
+            }
         },
-        total: function() {    
-            /* OLD:
-            
+        /* REFACTOR - NOT WORKING YET
+        removeItem: function(item) {
+            this.items = this.items.filter(i => i.id !== item.id);
+        }, */
+        total: function() {
+            return this.items.reduce((counter, item) => counter + Number(item.price), 0)
+        },
+        /* total: function() {
             let tot = 0;
-            
+
             for(let it of this.items) {
                 tot = tot + Number(it.price);
             }
-            
             return tot;
-            
-            */
-            return this.items.reduce((counter, item) => counter + Number(item.price), 0)
-        },
+        } */
         checkout: function() {
             this.$emit("checkout");
         }
@@ -80,4 +76,5 @@ li {
 li:first-child {
     border: none;
 }
+
 </style>
