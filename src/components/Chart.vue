@@ -51,9 +51,10 @@ export default {
 </script>
 <style scoped>
 aside {
-    border-left: 1px solid #ccc;
     padding: 1rem;
-    min-width: 16rem;
+    min-width: 14rem;
+    background: #fff;
+    margin: 1rem 0;
 }
 h3 {
     margin-top: 0;

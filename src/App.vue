@@ -59,19 +59,22 @@ body {
 }
 h1 {
   width: 74rem;
-  margin: 3rem auto 2rem;
+  margin: 2rem auto 1rem;
+  background: #d79797;
 }
 h1 span {
   display: inline-block;
+  padding: 1.5rem;
   font-size: 3rem;
   font-weight: 400;
-  color: #c77474;
-  border: 3px solid #c77474;
-  padding: 1.3rem;
   line-height: 0.6;
+  background: #c77474;
+  color: #fff;
 }
 .wrapper {
-  display: flex;
+    display: flex;
+    width: 74rem;
+    margin: 0 auto;
 }
 button:focus {
     outline: none;
