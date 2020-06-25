@@ -61,6 +61,8 @@ h1 {
   width: 74rem;
   margin: 2rem auto 1rem;
   background: #d79797;
+  border-radius: 3px;
+  overflow: hidden;
 }
 h1 span {
   display: inline-block;

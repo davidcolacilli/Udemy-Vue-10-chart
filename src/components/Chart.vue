@@ -55,6 +55,7 @@ aside {
     min-width: 14rem;
     background: #fff;
     margin: 1rem 0;
+    border-radius: 3px;
 }
 h3 {
     margin-top: 0;
