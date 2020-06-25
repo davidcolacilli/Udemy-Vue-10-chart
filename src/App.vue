@@ -16,8 +16,8 @@
       </span>
     </h1>
     <div class="wrapper">
-      <products @emit-product-to-app="addProd"/>
-      <chart :items="chartItems" @checkout="checkout"/>
+      <products @emit-product-to-app="chartAddProd"/>
+      <chart :items="chartItems" @checkout="chartCheckout" @remove-item="chartRemoveItem"/>
     </div>
   </div>
 </template>
@@ -34,14 +34,17 @@ export default {
   },
   data() {
       return {
-          chartItems: [],
+          chartItems: []
       }
   },
   methods: {
-    addProd: function(item) {
+    chartAddProd: function(item) {
       this.chartItems.push(item);
     },
-    checkout() {
+    chartRemoveItem(item) {
+      this.chartItems = this.chartItems.filter(i => i.id !== item.id);
+    },
+    chartCheckout() {
       this.chartItems = [];
       alert("Success");
     }
@@ -74,40 +77,40 @@ h1 span {
   display: flex;
 }
 button:focus {
-    outline: none;
+  outline: none;
 }
 button:disabled {
-    opacity: .4;
-    background: none;
+  opacity: .4;
+  background: none;
 }
 .btn-link {
-    display: inline-block;
-    text-transform: uppercase;
-    background: none;
-    color: #c77474;
-    border: none;
-    font-size: .5rem;
+  display: inline-block;
+  text-transform: uppercase;
+  background: none;
+  color: #c77474;
+  border: none;
+  font-size: .5rem;
 }
 .btn-link:hover {
-    color: #853939;
+  color: #853939;
 }
 .btn {
-    display: block;
-    width: 100%;
-    border: 1px solid #c77474;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 0.9rem;
-    border-radius: 3px;
-    background: none;
-    color: #c77474;
+  display: block;
+  width: 100%;
+  border: 1px solid #c77474;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0.9rem;
+  border-radius: 3px;
+  background: none;
+  color: #c77474;
 }
 .btn:hover {
-    background: rgba(199, 116, 116, .1);
+  background: rgba(199, 116, 116, .1);
 }
 .btn:focus:not(:disabled) {
-    border: 1px solid #8f5555;
+  border: 1px solid #8f5555;
 }
 .btn-action {
   background: #c77474;
